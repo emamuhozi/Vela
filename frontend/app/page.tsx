@@ -1,19 +1,9 @@
+import Sidebar from "@/components/Siderbar";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-black">
       <div className="flex">
-        <aside className="min-h-screen w-64 border-r border-gray-200 p-6">
-          <h1 className="text-2xl font-semibold">Vela</h1>
-
-          <nav className="mt-10 space-y-4">
-            <p>Dashboard</p>
-            <p>Accounts</p>
-            <p>Transactions</p>
-            <p>Spending</p>
-            <p>Settings</p>
-          </nav>
-        </aside>
-
+        <Sidebar />
         <section className="flex-1 p-10">
           <div className="flex items-center justify-between">
             <div>
