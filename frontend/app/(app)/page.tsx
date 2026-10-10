@@ -1,9 +1,6 @@
-import Sidebar from "@/components/Sidebar";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-black">
-      <div className="flex">
-        <Sidebar />
         <section className="flex-1 p-10">
           <div className="flex items-center justify-between">
             <div>
@@ -21,7 +18,6 @@ export default function Home() {
             <p className="text-gray-500">Your financial overview will appear here.</p>
           </div>
         </section>
-      </div>
     </main>
   );
 }

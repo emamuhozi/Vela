@@ -1,3 +1,6 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import {
     House,
     CreditCard,
@@ -7,21 +10,37 @@ import {
     Plus
 } from "lucide-react";
 import VelaLogo from "./VelaLogo";
+import Link from "next/link";
 
 export default function Sidebar() {
+  const pathname = usePathname();
   return (
     <aside className="flex min-h-screen w-60 flex-col border-r border-[#E8EBE9] bg-[#FAFAF9] px-4 py-7">
       <VelaLogo />
       <nav className="mt-10 space-y-2">
-  <div className="flex items-center gap-3 rounded-lg bg-[#EAF0ED] p-3 text-[#24594F]">
-    <House size={20} />
-    <span>Dashboard</span>
-  </div>
+  <Link
+  href="/"
+  className={`flex items-center gap-3 rounded-lg p-3 ${
+  pathname === "/"
+    ? "bg-[#EAF0ED] text-[#24594F]"
+    : "text-gray-600 hover:bg-gray-100"
+}`}
+  >
 
-  <div className="flex items-center gap-3 p-3 text-gray-600">
-    <CreditCard size={20} />
-    <span>Accounts</span>
-  </div>
+  <House size={20} />
+  <span>Dashboard</span>
+</Link>
+
+<Link
+  href="/accounts"
+    className={`flex items-center gap-3 rounded-lg p-3 ${
+  pathname === "/accounts"
+    ? "bg-[#EAF0ED] text-[#24594F]"
+    : "text-gray-600 hover:bg-gray-100"
+}`}>
+  <CreditCard size={20} />
+  <span>Accounts</span>
+</Link>
 
   <div className="flex items-center gap-3 p-3 text-gray-600">
     <List size={20} />
