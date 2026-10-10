@@ -42,20 +42,39 @@ export default function Sidebar() {
   <span>Accounts</span>
 </Link>
 
-  <div className="flex items-center gap-3 p-3 text-gray-600">
-    <List size={20} />
-    <span>Transactions</span>
-  </div>
+<Link
+  href="/transactions"
+    className={`flex items-center gap-3 rounded-lg p-3 ${
+  pathname === "/transactions"
+    ? "bg-[#EAF0ED] text-[#24594F]"
+    : "text-gray-600 hover:bg-gray-100"
+}`}>
+  <List size={20} />
+  <span>transactions</span>
+</Link>
 
-  <div className="flex items-center gap-3 p-3 text-gray-600">
-    <ChartPie size={20} />
-    <span>Spending</span>
-  </div>
+<Link
+  href="/spending"
+    className={`flex items-center gap-3 rounded-lg p-3 ${
+  pathname === "/spending"
+    ? "bg-[#EAF0ED] text-[#24594F]"
+    : "text-gray-600 hover:bg-gray-100"
+}`}>
+  <ChartPie size={20} />
+  <span>Spending</span>
+</Link>
 
-  <div className="flex items-center gap-3 p-3 text-gray-600">
-    <Settings size={20} />
-    <span>Settings</span>
-  </div>
+<Link
+  href="/settings"
+    className={`flex items-center gap-3 rounded-lg p-3 ${
+  pathname === "/settings"
+    ? "bg-[#EAF0ED] text-[#24594F]"
+    : "text-gray-600 hover:bg-gray-100"
+}`}>
+  <Settings size={20} />
+  <span>Settings</span>
+</Link>
+
 </nav>
     <div className="mt-auto border-t border-[#E8EBE9] pt-4">
   <div className="flex items-center gap-3 px-3 py-2 text-[#24594F]">
