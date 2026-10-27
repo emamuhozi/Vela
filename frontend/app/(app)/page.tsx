@@ -1,23 +1,27 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-black">
-        <section className="flex-1 p-10">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm text-gray-500">Overview</p>
-              <h2 className="text-3xl font-semibold">Dashboard</h2>
-            </div>
+    <main>
+      <header className="flex items-start justify-between">
+        <div>
+          <h1 className="text-4xl font-semibold tracking-tight text-[#171B1A]">
+            Dashboard
+          </h1>
 
-            <div className="flex items-center gap-4">
-              <button>Notifications</button>
-              <div>Account</div>
-            </div>
-          </div>
+          <p className="mt-2 text-sm text-[#6B7474]">
+            Financial overview
+          </p>
+        </div>
 
-          <div className="mt-10">
-            <p className="text-gray-500">Your financial overview will appear here.</p>
-          </div>
-        </section>
+        <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F0F1F0] text-sm font-medium text-[#343B3B]">
+          JD
+        </div>
+      </header>
+
+      <section className="mt-12">
+        <p className="text-gray-500">
+          Your financial overview will appear here.
+        </p>
+      </section>
     </main>
   );
 }
